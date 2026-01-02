@@ -1,11 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Overknight</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameWaveStudios Developer Site</title>
+
+    <!-- Site Icon (same icon as Google Play Developer: GameWaveStudios) -->
+    <!-- To set this up on GitHub, upload your icon.png file to your repository -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <style>
+        :root {
+            --bg-main: #ffffff;
+            --text-main: #000000;
+            --text-muted: #444444;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        header {
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        h3 {
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.3rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            margin: 1.5rem 0 2rem;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-fallback {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .news-item {
+            background-color: rgba(37, 99, 235, 0.03);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .news-date {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .channels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .channel {
+            flex: 1;
+            min-width: 200px;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: 3rem;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .channels {
+                flex-direction: column;
+            }
+            
+            .channel {
+                min-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Overknight</h1>
-  <p>Official developer site.</p>
+
+<header>
+    <h1>GameWaveStudios</h1>
+    <p>Creator of the cross-platform game <strong>Overknight</strong></p>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>Overknight</h2>
+        
+        <article>
+            <h3>Pre-Alpha Demo</h3>
+            <p>Play the official Overknight Pre-Alpha demo on Google Play:</p>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=com.gamewavestudios.overknight" target="_blank">
+                    Overknight on Google Play
+                </a>
+            </p>
+
+            <h3>Gameplay Video</h3>
+            <p>
+                Watch the official Overknight gameplay demonstration:
+            </p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/-mJ7jCrNK5s" 
+                    title="Overknight Gameplay Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="video-fallback">
+                <p>
+                    If the video doesn't play, you can watch it directly on YouTube:
+                    <a href="https://youtu.be/-mJ7jCrNK5s?si=T5ltcASOQP4FA4Nc" target="_blank">
+                        ▶ Watch Overknight Gameplay on YouTube
+                    </a>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <h2>News</h2>
+        <article>
+            <p>
+                GameWaveStudios is actively developing Overknight, a cross-platform game designed to run on a wide range of devices.
+                The Pre-Alpha currently serves as the first public demo phase.
+            </p>
+            <ul>
+                <li>The full demo is planned to release sometime in 2026, marking the completion of the Pre-Alpha stage.</li>
+                <li>Stay tuned for future Overknight developments, including the full release, platform ports, and many more updates.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="section">
+        <h2>Latest Overknight Update</h2>
+        <article class="news-item">
+            <div class="news-date">14 December 2025</div>
+            <h3>First Overknight Public Test</h3>
+            <p>
+                This update marks the first public test of Overknight, focusing on early gameplay systems,
+                performance testing across devices, and gathering player feedback.
+            </p>
+        </article>
+    </section>
+
+    <section class="section">
+        <h2>Official Channels</h2>
+        <article>
+            <p>Follow our official channels for updates and content:</p>
+            
+            <div class="channels">
+                <div class="channel">
+                    <h3>GameWaveStudios Developer Channel</h3>
+                    <p>
+                        <a href="https://youtube.com/@gwsovk" target="_blank">@gwsovk on YouTube</a>
+                    </p>
+                </div>
+                
+                <div class="channel">
+                    <h3>Music Artist Channel</h3>
+                    <p>
+                        <a href="https://youtube.com/@_stmheat?si=9LrXSmT7LByM0gY0" target="_blank">$TMHEAT on YouTube</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+
+<footer>
+    &copy; 2025 - 2026 GameWaveStudios. All rights reserved.
+</footer>
+
 </body>
 </html>
